@@ -19,10 +19,11 @@ import matplotlib.pyplot as plt
 # 在这个例子中，我们只传入了一个数组`[2, 4, 6, 8]`。
 # 所以，`plot`方法会默认使用`[0, 1, 2, 3]`作为x轴的值。
 # 最终，这会在图表上绘制一条经过点 (0, 2), (1, 4), (2, 6), (3, 8) 的线。
+input_values = [1, 2, 3, 4, 5]
 squares = [1, 4, 9, 16, 25]
 # 创建子图
 fig, ax = plt.subplots()
-ax.plot(squares, linewidth=3)
+ax.plot(input_values, squares, linewidth=3)
 # 设置图题并给坐标加上标签
 ax.set_title("Square Numbers", fontsize=24)
 ax.set_xlabel("Value", fontsize=14)
