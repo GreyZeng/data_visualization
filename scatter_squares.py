@@ -13,7 +13,7 @@ fig, ax = plt.subplots()
 # ax.scatter(2, 4, s=200)
 # 批量设置散点
 
-ax.scatter(x_values, y_values, s=50)
+ax.scatter(x_values, y_values, s=20)
 ax.set_title("Square Numbers", fontsize=24)
 ax.set_xlabel("Value", fontsize=14)
 ax.set_ylabel("Square of Value", fontsize=14)
@@ -22,4 +22,5 @@ ax.tick_params(labelsize=14)
 
 # 设置每个坐标轴的取值范围
 ax.axis([0, 1100, 0, 1_100_000])
+# ax.ticklabel_format(style='plain')
 plt.show()
