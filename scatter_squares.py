@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 x_values = range(1, 1001)
-y_values = [x**2 for x in x_values]
+y_values = [x ** 2 for x in x_values]
 """绘制散点图"""
 # 通过这句话查看散点图样式有哪些
 # print(plt.style.available)
@@ -13,7 +13,9 @@ fig, ax = plt.subplots()
 # ax.scatter(2, 4, s=200)
 # 批量设置散点
 
-ax.scatter(x_values, y_values, s=20)
+# ax.scatter(x_values, y_values, color='red', s=20)
+# ax.scatter(x_values, y_values, color=(0, 0.8, 0), s=20)
+ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, s=20)
 ax.set_title("Square Numbers", fontsize=24)
 ax.set_xlabel("Value", fontsize=14)
 ax.set_ylabel("Square of Value", fontsize=14)
