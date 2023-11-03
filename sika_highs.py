@@ -8,6 +8,12 @@ reader = csv.reader(lines)
 header_row = next(reader)
 
 # enumerate 方法用于获取每个元素的索引和值
-for index, column_header in enumerate(header_row):
-    print(index, column_header)
+# for index, column_header in enumerate(header_row):
+#     print(index, column_header)
+# 提取最高温度
+highs = []
+for row in reader:
+    high = int(row[4])
+    highs.append(high)
+print(highs)
 # print(header_row)
