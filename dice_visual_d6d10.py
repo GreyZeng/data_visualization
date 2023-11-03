@@ -26,4 +26,7 @@ fig = px.bar(x=poss_results, y=frequencies, title=title, labels=labels)
 # 进一步定制图形
 # 指定了x轴上刻度标记的间距
 fig.update_layout(xaxis_dtick=1)
+
 fig.show()
+# 写入 html 文件中
+# fig.write_html('dice_visual_d6d10.html')
