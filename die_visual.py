@@ -18,5 +18,7 @@ for value in poss_results:
 
 # 对结果进行可视化
 # install ploty, pandas 两个模块
-fig = px.bar(x=poss_results, y=frequencies)
+title = "Results of Rolling One D6 1,000 times"
+labels = {'x': 'Result', 'y': 'Frequency of Result'}
+fig = px.bar(x=poss_results, y=frequencies, title=title, labels=labels)
 fig.show()
