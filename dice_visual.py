@@ -23,4 +23,7 @@ for value in poss_results:
 title = "Results of Rolling Two D6 Dice 1,000 times"
 labels = {'x': 'Result', 'y': 'Frequency of Result'}
 fig = px.bar(x=poss_results, y=frequencies, title=title, labels=labels)
+# 进一步定制图形
+# 指定了x轴上刻度标记的间距
+fig.update_layout(xaxis_dtick=1)
 fig.show()
