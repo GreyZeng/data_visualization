@@ -4,14 +4,18 @@ import plotly.express as px
 import pandas as pd
 
 # 将数据转换为字符串读取并转换为Python对象
-path = Path('eq_data/eq_data_1_day_m1.geojson')
-contents = path.read_text()
+path = Path('eq_data/eq_data_30_day_m1.geojson')
+try:
+    contents = path.read_text()
+except:
+    contents = path.read_text(encoding='utf-8')
+
 all_eq_data = json.loads(contents)
 
 # 将数据文件转换为更容易阅读的版本
-path = Path('eq_data/readable_eq_data.geojson')
-readable_contents = json.dumps(all_eq_data, indent=4)
-path.write_text(readable_contents)
+# path = Path('eq_data/readable_eq_data.geojson')
+# readable_contents = json.dumps(all_eq_data, indent=4)
+# path.write_text(readable_contents)
 
 # 查看数据集中的所有地震
 all_eq_dicts = all_eq_data['features']
@@ -43,7 +47,9 @@ fig = px.scatter(
     width=800,
     height=800,
     title='全球地震散点图',
-    size_max=10
+    size='震级',
+    size_max=10,
+    color='震级'
 )
 # fig.write_html('global_earthquakes.html')
 fig.show()
