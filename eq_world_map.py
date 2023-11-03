@@ -49,7 +49,8 @@ fig = px.scatter(
     title='全球地震散点图',
     size='震级',
     size_max=10,
-    color='震级'
+    color='震级',
+    hover_name='位置'
 )
 # fig.write_html('global_earthquakes.html')
 fig.show()
