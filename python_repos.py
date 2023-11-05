@@ -1,6 +1,8 @@
 import requests
 
 # Github不稳定，下述代码运行可能也会不稳定
+# https://api.github.com/rate_limit
+# 这里可以查看 Github 的 API 的请求限制
 url = "https://api.github.com/search/repositories"
 url += "?q=language:python+sort:stars+stars:>10000"
 headers = {"Accept": "application/vnd.github.v3+json"}
